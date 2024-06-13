@@ -18,11 +18,12 @@
     <div class="container">
       <p>Harcama Formu</p>
       <form class="form">
-        <label for="date">Tarih</label>
-        <input type="date" id="date" />
+        <label for="date" style="color: brown; font-size: 23px;">Tarih</label>
+        <input class="common" type="date" id="date" />
 
-        <label for="spending-amount">Harcama Miktari</label>
+        <label for="spending-amount" style="color: brown; font-size: 23px;">Harcama Miktari</label>
         <input
+        class="common"
           type="number"
           id="spending-amount"
           name="spend"
@@ -30,15 +31,24 @@
           min="0.1"
           max="10"
           value="0.1"
+
         />
 
-        <label for="spending-area">Harcama Alani</label>
-        <input type="text" id="spending-area" />
+        <label for="spending-area" style="color: brown; font-size: 23px;">Harcama Alani</label>
+        <input type="text" id="spending-area" class="common" placeholder="Kira, Fatura, Kredi Karti" />
+          <div class="kayit">
+             <input type="submit" value="Kaydet" class="kaydet" />
+          </div>
+       
 
-        <input type="submit" value="Kaydet" />
+        </form>
 
+        <div class="artis">
+
+        
         <label for="increase"></label>
         <input
+      
           type="number"
           id="increase"
           name="spend"
@@ -48,32 +58,41 @@
           value="0.1"
         />
 
-        <input type="submit" value="Ekle" />
+        <input type="submit" value="Ekle"  class="ekle"/>
 
+        </div>
+
+        <div class="tab">
         <table class="table">
-          <tr>
-            <th>Tarih</th>
-            <th>Harcama Alani</th>
-            <th>Miktar (₺) </th>
-            <th>Islem</th>
+          <tr class="row">
+            <td>Tarih</td>
+            <td>Harcama Alani</td>
+            <td>Miktar (₺) </td>
+            <td>Islem</td>
           </tr>
         </table>
+      </div>
 
+      <div class="tab1">
         <table class="table1">
           <tr>
-            <th>Geliriniz (₺) </th>
-            <th>0</th>
+            <td>Geliriniz (₺) :</td>
+            <td>0</td>
           </tr>
           <tr>
-            <th>Gideriniz (₺) </th>
-            <th>0</th>
+            <td>Gideriniz (₺) :</td>
+            <td>0</td>
           </tr>
           <tr>
-            <th>Kalan (₺) </th>
-            <th>0</th>
+            <td>Kalan (₺) :</td>
+            <td>0</td>
           </tr>
         </table>
-      </form>
+
+        <div class="temiz"><input type="submit" value="Bilgileri Temizle" id="temizle"></div>
+        
+        </div>
+     
     </div>
 
     <script src="./app.js"></script>
